@@ -1,4 +1,4 @@
-using BlazorWorkshop.App;
+using BlazorWorkshop.APP;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
