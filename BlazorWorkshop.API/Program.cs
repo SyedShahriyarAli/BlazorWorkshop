@@ -1,4 +1,5 @@
 using BlazorWorkshop.API.Data;
+using BlazorWorkshop.API.Services.DepartmentService;
 using BlazorWorkshop.API.Services.StudentService;
 using Microsoft.EntityFrameworkCore;
 
@@ -31,6 +32,7 @@ builder.Services.AddDbContext<DataContext>(
 );
 
 builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 
 var app = builder.Build();
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlazorWorkshop.Shared.Models
 {
-    public class GenericeResponse<T>
+    public class GenericResponse<T>
     {
         public T? Data { get; set; }
         public bool Success { get; set; } = true;

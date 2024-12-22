@@ -14,9 +14,9 @@ namespace BlazorWorkshop.API.Services.StudentService
             _context = context;
         }
 
-        public async Task<GenericeResponse<Student>> CreateStudent(Student student)
+        public async Task<GenericResponse<Student>> CreateStudent(Student student)
         {
-            GenericeResponse<Student> response = new();
+            GenericResponse<Student> response = new();
 
             try
             {
@@ -35,9 +35,9 @@ namespace BlazorWorkshop.API.Services.StudentService
             return response;
         }
 
-        public async Task<GenericeResponse<Student>> GetStudent(int id)
+        public async Task<GenericResponse<Student>> GetStudent(int id)
         {
-            GenericeResponse<Student> response = new();
+            GenericResponse<Student> response = new();
 
             try
             {
@@ -62,9 +62,9 @@ namespace BlazorWorkshop.API.Services.StudentService
             return response;
         }
 
-        public async Task<GenericeResponse<List<StudentDto>>> GetStudents()
+        public async Task<GenericResponse<List<StudentDto>>> GetStudents()
         {
-            GenericeResponse<List<StudentDto>> response = new();
+            GenericResponse<List<StudentDto>> response = new();
 
             try
             {
@@ -86,9 +86,9 @@ namespace BlazorWorkshop.API.Services.StudentService
             return response;
         }
 
-        public async Task<GenericeResponse<Student>> UpdateStudent(int id, Student student)
+        public async Task<GenericResponse<Student>> UpdateStudent(int id, Student student)
         {
-            GenericeResponse<Student> response = new();
+            GenericResponse<Student> response = new();
 
             try
             {

@@ -5,9 +5,9 @@ namespace BlazorWorkshop.API.Services.StudentService
 {
     public interface IStudentService
     {
-        Task<GenericeResponse<List<StudentDto>>> GetStudents();
-        Task<GenericeResponse<Student>> GetStudent(int id);
-        Task<GenericeResponse<Student>> CreateStudent(Student student);
-        Task<GenericeResponse<Student>> UpdateStudent(int id, Student student);
+        Task<GenericResponse<List<StudentDto>>> GetStudents();
+        Task<GenericResponse<Student>> GetStudent(int id);
+        Task<GenericResponse<Student>> CreateStudent(Student student);
+        Task<GenericResponse<Student>> UpdateStudent(int id, Student student);
     }
 }

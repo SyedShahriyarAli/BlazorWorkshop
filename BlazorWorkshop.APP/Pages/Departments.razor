@@ -1,0 +1,44 @@
+﻿@page "/departments"
+
+@inject HttpClient Client
+
+<h3>Departments</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (departments is not null)
+        {
+            @foreach (var department in departments)
+            {
+                <tr>
+                    <td>@department.Id</td>
+                    <td>@department.Name</td>
+                    <td>@(department.IsActive ? "Active" : "Inactive")</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+
+@code {
+    List<Department>? departments = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await Client.GetFromJsonAsync<GenericResponse<List<Department>>>("https://localhost:7260/api/Department");
+
+        if (response?.Success == true)
+        {
+            departments = response.Data;
+        }
+    }
+}
